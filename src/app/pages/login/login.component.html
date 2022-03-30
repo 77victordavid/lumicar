@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <main class="form-signin py-5">
+    <form [formGroup]="form">
+      
+      <h1 class="h3 mb-3 fw-normal">Iniciar Sesion</h1>
+
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="nombre@ejemplo.com"
+          formControlName="email"
+        />
+        <label for="floatingInput">Correo</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          formControlName="password"
+          placeholder="Contraseña"
+        />
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Recordarme
+        </label>
+      </div>
+      <p *ngIf="isLogin" class="user-error">Usuario incorrecto</p>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="iniciar()">
+        Iniciar sesión
+      </button>
+    </form>
+  </main>
+</div>

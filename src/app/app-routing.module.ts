@@ -1,3 +1,5 @@
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -18,6 +20,12 @@ const routes: Routes = [
   },
   {    
     path: 'contact', component: ContactComponent
+  },
+  {    
+    path: 'login', component: LoginComponent
+  },
+  {    
+    path: 'dashboard', component: DashboardComponent
   }
 ];
 

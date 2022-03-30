@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ];
   showNavigationArrows = true;
   showNavigationIndicators = true;
-  
+  interval = 2000;
   constructor(config: NgbCarouselConfig) {
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;

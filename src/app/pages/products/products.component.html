@@ -1,5 +1,4 @@
 <main>
-
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
@@ -11,175 +10,34 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
+        <div class="col" *ngFor="let producto of productos">
           <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/18960C2-IMS-es_CO?$jpglarge$&wid=300">
+            <img
+              [src]="producto.img"
+            />
 
             <div class="card-body">
-              <H5>CANbus</H5>
-              <p class="card-text">Gracias a su instalación sencilla, 
-                garantiza una compatibilidad perfecta con el sistema eléctrico del auto y 
-                elimina los posibles errores de panel,
-                 el parpadeo de las luces LED y las indicaciones HB.</p>
+              <H5>{{producto.nombre}}</H5>
+              <p class="card-text">
+               {{producto.descripcion}}
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                    (click)="agregarAlCarrito(producto)"
+                  >
+                    Agregar
+                  </button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="text-muted" style="font-size: 20px; font-weight: bold;">{{producto.precio | currency}}</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/18952C2-IMS-es_CO?$jpglarge$&wid=600"/>
-
-            <div class="card-body">
-              <h5>CANbus</h5>
-              <p class="card-text">Como se puede instalar fácilmente, garantiza un ajuste eléctrico perfecto
-                 en el auto y elimina los posibles problemas de advertencia del tablero. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11258UE2X2-IMS-es_CO?wid=420&hei=360&$jpglarge$">
-
-            <div class="card-body">
-              <H5>H1</H5>
-              <p class="card-text">Las luces LED de Philips Ultinon Essential entregan el mejor valor para su dinero.
-                 Vienen en un diseño compacto todo en uno que cuentan con un brillo poderoso, un aspecto elegante,
-                  tecnología con disipación doble de calor y compatibilidad para 12 y 24 V.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11336UE2X2-IMS-es_CO?$jpglarge$&wid=600">
-
-            <div class="card-body">
-              <H5>H3</H5>
-              <p class="card-text">cuentan con un brillo poderoso, un aspecto elegante,
-                 tecnología con disipación doble de calor</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11342UE2X2-IMS-es_CO?$jpglarge$&wid=600">
-
-            <div class="card-body">
-              <H5>H4</H5>
-              <p class="card-text">Disfruta de una experiencia con estilo y luz blanca</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11972UE2X2-IMS-es_CO?$jpglarge$&wid=600"/>
-
-            <div class="card-body">
-              <h5>H7</h5>
-              <p class="card-text">Las lámparas LED Lumileds de alta calidad disponen de un haz blanco similar a la luz diurna.
-                 Iluminan todo de forma brillante y clara sin deslumbrar a los conductores que se acercan.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11972U50CWX2_40-IMS-es_CO?$jpglarge$&wid=600"/>
-
-            <div class="card-body">
-              <H5>H7</H5>
-              <p class="card-text">Las luces LED de Philips Ultinon Essential entregan el mejor valor para su dinero.
-                 Vienen en un diseño compacto todo en uno que cuentan con un brillo poderoso, un aspecto elegante,
-                 tecnología con disipación doble de calor y compatibilidad para 12 y 24 V.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11362UE2X2-IMS-es_CO?$jpglarge$&wid=600">
-
-            <div class="card-body">
-              <H5>H11</H5>
-              <p class="card-text">Las lámparas LED Lumileds de alta calidad disponen de un haz blanco 
-                similar a la luz diurna. Iluminan todo de forma brillante y clara sin deslumbrar a los 
-                conductores que se acercan.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="https://images.philips.com/is/image/PhilipsConsumer/11366U50CWX2_40-IMS-es_CO?$jpglarge$&wid=600">
-
-            <div class="card-body">
-              <H5>H16</H5>
-              <p class="card-text">Las luces LED de Philips Ultinon Essential entregan el mejor valor
-                 para su dinero. Vienen en un diseño compacto todo en uno que cuentan con un brillo 
-                 poderoso, un aspecto elegante, tecnología con disipación doble de calor</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-        
-        
-        
       </div>
     </div>
   </div>
-
 </main>
